@@ -20,7 +20,7 @@ jobs:
         run: |
           git config user.name "guptasuvodip"
           git config user.email "guptasuvodip@gmail.com"
-          git add ec2_update.log
+          git add -f  ec2_update.log
           git commit -m "Update triggered by EC2"
           git push
 
