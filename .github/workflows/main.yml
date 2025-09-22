@@ -13,6 +13,11 @@ jobs:
       - name: Make file updates
         run: |
           echo "Update triggered by EC2 at $(date)" >> ec2_update.log
+           mkdir -p class5/subdir
+          echo "New file content" > class5/subdir/newfile.txt
+
+      - name: Commit and push changes
+        run: |
           git config user.name "guptasuvodip"
           git config user.email "guptasuvodip@gmail.com"
           git add ec2_update.log
