@@ -1,0 +1,21 @@
+name: Triggered Workflow
+
+on:
+  repository_dispatch:
+    types: [ec2-trigger]
+
+jobs:
+  update_files:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Make file updates
+        run: |
+          echo "Update triggered by EC2 at $(date)" >> ec2_update.log
+          git config user.name "guptasuvodip"
+          git config user.email "guptasuvodip@gmail.com"
+          git add ec2_update.log
+          git commit -m "Update triggered by EC2"
+          git push
+
