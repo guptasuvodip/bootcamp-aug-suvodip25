@@ -1,0 +1,21 @@
+name: Suvodip
+gender: male
+native: West Bengal
+citizen: Indian
+contact:
+  email: guptasuvodip@gmail.com
+  phone: "+91-9474543210"
+  address: West Bengal  
+profession:
+  job: Software Engineer
+  skills:
+  - Linux
+  - Terraform
+  - AWS
+  projects:
+  - name: AWS VPC and Subnets Setup
+    description: Setup VPC, Public Subnet, Private Subnet, IGW and NGW
+    tools: [AWS Console, AWS CLI]
+  - name: Deploy 2 tier app
+    description: Deployed a 2 tier app
+    tools: [EC2,AWS Console,AWS CLI,RDS,ELB]
